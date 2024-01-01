@@ -1,8 +1,8 @@
 const Logo = () => {
   return (
-    <a href=''>
+    <a href='' className='inline-flex'>
       <img src='/logo.svg' />
-      <span>EduPress</span>
+      <span className='font-exo text-3xl font-bold'>EduPress</span>
     </a>
   );
 };
