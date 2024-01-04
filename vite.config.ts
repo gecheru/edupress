@@ -10,6 +10,7 @@ export default defineConfig({
       '@assets': path.resolve(__dirname, 'src/assets/'),
       '@public': path.resolve(__dirname, 'public/'),
       '@views': path.resolve(__dirname, 'src/views/'),
+      '@constants': path.resolve(__dirname, 'src/constants/'),
     },
   },
   plugins: [react()],

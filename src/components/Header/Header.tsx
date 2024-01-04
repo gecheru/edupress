@@ -1,7 +1,7 @@
 import Breadcrumbs from '@components/Breadcrumbs/Breadcrumbs';
 import Navigation from '@components/Navigation/Navigation';
 
-const Head = () => {
+const Header = () => {
   return (
     <>
       <Navigation />
@@ -10,4 +10,4 @@ const Head = () => {
   );
 };
 
-export default Head;
+export default Header;

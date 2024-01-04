@@ -24,7 +24,8 @@
       "@components/*": ["src/components/*"],
       "@assets/*": ["src/assets/*"],
       "@public/*": ["public/*"],
-      "@views/*": ["src/views/*"]
+      "@views/*": ["src/views/*"],
+      "@constants/*": ["src/constants/*"]
     }
   },
   "include": ["src"],

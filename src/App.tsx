@@ -1,10 +1,15 @@
-import Head from '@components/Head/Head';
+import Header from '@components/Header/Header';
 import './App.css';
+import { RouterProvider } from 'react-router-dom';
+import Router from './router';
+import Footer from '@components/Footer/Footer';
 
 const App = () => {
   return (
     <>
-      <Head />
+      <Header />
+      <RouterProvider router={Router} />
+      <Footer />
     </>
   );
 };
