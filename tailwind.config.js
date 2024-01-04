@@ -5,6 +5,7 @@ export default {
     fontFamily: {
       exo: 'Exo, sans-serif',
       jost: 'Jost, sans-serif',
+      sans: ['Jost', 'sans-serif'],
     },
     container: {
       padding: '15px',

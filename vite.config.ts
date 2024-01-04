@@ -11,6 +11,7 @@ export default defineConfig({
       '@public': path.resolve(__dirname, 'public/'),
       '@views': path.resolve(__dirname, 'src/views/'),
       '@constants': path.resolve(__dirname, 'src/constants/'),
+      '@layouts': path.resolve(__dirname, 'src/layouts/'),
     },
   },
   plugins: [react()],
