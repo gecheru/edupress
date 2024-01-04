@@ -5,27 +5,34 @@ import Home from '@views/Home/Home';
 import PostDetails from '@views/PostDetails/PostDetails';
 import Posts from '@views/Posts/Posts';
 import { createBrowserRouter } from 'react-router-dom';
+import App from '../App';
 
 const Router = createBrowserRouter([
   {
     path: RouterPaths.Index,
-    element: <Home />,
-  },
-  {
-    path: RouterPaths.Courses,
-    element: <Courses />,
-  },
-  {
-    path: RouterPaths.CourseDetails,
-    element: <CourseDetails />,
-  },
-  {
-    path: RouterPaths.Posts,
-    element: <Posts />,
-  },
-  {
-    path: RouterPaths.PostDetails,
-    element: <PostDetails />,
+    element: <App />,
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+      {
+        path: RouterPaths.Courses,
+        element: <Courses />,
+      },
+      {
+        path: RouterPaths.CourseDetails,
+        element: <CourseDetails />,
+      },
+      {
+        path: RouterPaths.Posts,
+        element: <Posts />,
+      },
+      {
+        path: RouterPaths.PostDetails,
+        element: <PostDetails />,
+      },
+    ],
   },
 ]);
 

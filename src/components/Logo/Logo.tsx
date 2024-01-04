@@ -1,9 +1,12 @@
+import { RouterPaths } from '@constants/routerPaths';
+import { Link } from 'react-router-dom';
+
 const Logo = () => {
   return (
-    <a href='' className='inline-flex'>
+    <Link to={RouterPaths.Index} className='inline-flex'>
       <img src='/logo.svg' />
       <span className='font-exo text-3xl font-bold'>EduPress</span>
-    </a>
+    </Link>
   );
 };
 
