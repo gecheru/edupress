@@ -2,16 +2,20 @@
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
+    screens: {
+      lg: '900px',
+      xl: '1200px',
+    },
     fontFamily: {
       exo: 'Exo, sans-serif',
       jost: 'Jost, sans-serif',
       sans: ['Jost', 'sans-serif'],
     },
     container: {
-      padding: '15px',
+      padding: '16px',
       center: true,
       screens: {
-        xl: '1290px',
+        xl: '1322px',
       },
     },
     colors: {
