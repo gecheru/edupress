@@ -4,4 +4,6 @@ export const RouterPaths = {
   CourseDetails: 'courses/:id',
   Posts: 'posts',
   PostDetails: 'posts/:id',
+  FAQ: 'faq',
+  Contacts: 'contacts',
 };

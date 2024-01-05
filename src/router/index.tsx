@@ -6,12 +6,18 @@ import PostDetails from '@views/PostDetails/PostDetails';
 import Posts from '@views/Posts/Posts';
 import { createBrowserRouter } from 'react-router-dom';
 import App from '../App';
+import NotFound from '@views/NotFound/NotFound';
+import Contacts from '@views/Contacts/Contacts';
 
 const Router = createBrowserRouter([
   {
     path: RouterPaths.Index,
     element: <App />,
     children: [
+      {
+        path: '*',
+        element: <NotFound />,
+      },
       {
         index: true,
         element: <Home />,
@@ -31,6 +37,10 @@ const Router = createBrowserRouter([
       {
         path: RouterPaths.PostDetails,
         element: <PostDetails />,
+      },
+      {
+        path: RouterPaths.Contacts,
+        element: <Contacts />,
       },
     ],
   },
