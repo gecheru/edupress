@@ -1,5 +1,5 @@
 import Breadcrumbs from '@components/Breadcrumbs/Breadcrumbs';
-import Navigation from '@components/Navigation/Navigation';
+import Navigation from '@layouts/Navigation/Navigation';
 
 const Header = () => {
   return (

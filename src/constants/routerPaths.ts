@@ -6,4 +6,5 @@ export const RouterPaths = {
   PostDetails: 'posts/:id',
   FAQ: 'faq',
   Contacts: 'contacts',
+  Auth: 'auth',
 };
