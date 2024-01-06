@@ -13,10 +13,20 @@ const Router = createBrowserRouter([
   {
     path: RouterPaths.Index,
     element: <App />,
+    handle: {
+      crumb: () => ({
+        title: 'Home',
+      }),
+    },
     children: [
       {
         path: '*',
         element: <NotFound />,
+        handle: {
+          crumb: () => ({
+            title: 'Not Found',
+          }),
+        },
       },
       {
         index: true,
@@ -25,6 +35,12 @@ const Router = createBrowserRouter([
       {
         path: RouterPaths.Courses,
         element: <Courses />,
+        handle: {
+          // crumb: () => <Link to={RouterPaths.Courses}>Courses</Link>,
+          crumb: () => ({
+            title: 'Courses',
+          }),
+        },
       },
       {
         path: RouterPaths.CourseDetails,
@@ -33,6 +49,11 @@ const Router = createBrowserRouter([
       {
         path: RouterPaths.Posts,
         element: <Posts />,
+        handle: {
+          crumb: () => ({
+            title: 'Posts',
+          }),
+        },
       },
       {
         path: RouterPaths.PostDetails,
@@ -41,6 +62,11 @@ const Router = createBrowserRouter([
       {
         path: RouterPaths.Contacts,
         element: <Contacts />,
+        handle: {
+          crumb: () => ({
+            title: 'Contacts',
+          }),
+        },
       },
     ],
   },
