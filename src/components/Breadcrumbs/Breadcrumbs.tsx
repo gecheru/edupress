@@ -17,7 +17,7 @@ const Breadcrumbs = () => {
     .map((match) => ({ path: match.pathname, ...match.handle.crumb() }));
 
   return (
-    <aside className='bg-gray-white py-1 lg:py-2'>
+    <aside className='bg-gray-white py-3 lg:py-4'>
       <div className='container'>
         <ul className='flex flex-wrap items-center text-gray-dark'>
           {crumbs.map((crumb, index) => (
