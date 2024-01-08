@@ -5,11 +5,13 @@ import Footer from '@layouts/Footer/Footer';
 
 const App = () => {
   return (
-    <>
+    <div className='grid h-[100dvh] grid-rows-page'>
       <Header />
-      <Outlet />
+      <main>
+        <Outlet />
+      </main>
       <Footer />
-    </>
+    </div>
   );
 };
 

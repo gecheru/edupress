@@ -3,10 +3,31 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --card-width: 410px;
+  }
   html {
     @apply bg-white text-black;
   }
   a {
     @apply hover:text-primary-hover;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-exo font-semibold;
+  }
+
+  h4 {
+    @apply text-xl;
+  }
+}
+
+@layer components {
+  .footer-title {
+    @apply mb-6 uppercase;
   }
 }

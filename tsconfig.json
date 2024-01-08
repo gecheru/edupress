@@ -26,7 +26,8 @@
       "@public/*": ["public/*"],
       "@views/*": ["src/views/*"],
       "@constants/*": ["src/constants/*"],
-      "@layouts/*": ["src/layouts/*"]
+      "@layouts/*": ["src/layouts/*"],
+      "@/*": ["src/*"]
     }
   },
   "include": ["src"],

@@ -33,7 +33,15 @@ export default {
         white: '#F5F5F5',
       },
     },
-    extend: {},
+    extend: {
+      gridTemplateRows: {
+        page: 'auto minmax(300px, 1fr) auto',
+      },
+      gridTemplateColumns: {
+        footer:
+          'minmax(auto, var(--card-width)) minmax(190px, 1fr) minmax(190px, 1fr) minmax(auto, var(--card-width))',
+      },
+    },
   },
   plugins: [],
 };
