@@ -43,7 +43,7 @@ const Navigation = () => {
           onClick={setIsMobileMenuOpened}
         />
         <DesktopMenu extraClass={'hidden lg:flex'} links={links} />
-        <ProfileLink />
+        <ProfileLink extraClass={'hidden lg:flex'} />
         <MobileMenu
           links={links}
           menuVisibilityHandler={setIsMobileMenuOpened}
