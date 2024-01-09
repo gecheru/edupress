@@ -1,9 +1,10 @@
 import Logo from '@components/Logo/Logo';
 import { LogoSize } from '@/enums/LogoSize';
-
+import FooterMenu from '@components/FooterMenu/FooterMenu';
+import ContactLink from '@components/ContactLink/ContactLink';
 const Footer = () => {
   return (
-    <footer className='bg-gray-white py-14 text-gray-dark lg:py-20'>
+    <footer className='lg:py-15 bg-gray-white py-10 text-gray-dark [&_a:not(:hover)]:text-gray-dark [&_a]:font-medium'>
       <div className='container grid gap-8 lg:grid-cols-footer'>
         <div>
           <Logo size={LogoSize.Sm} />
@@ -14,9 +15,45 @@ const Footer = () => {
         </div>
         <div>
           <h4 className='footer-title'>Get help</h4>
+          <FooterMenu
+            links={[
+              {
+                title: 'Contact',
+                path: '',
+              },
+              {
+                title: 'Latest Articles',
+                path: '',
+              },
+              {
+                title: 'FAQ',
+                path: '',
+              },
+            ]}
+          />
         </div>
         <div>
           <h4 className='footer-title'>Programs</h4>
+          <FooterMenu
+            links={[
+              {
+                title: 'Frontend',
+                path: '',
+              },
+              {
+                title: 'Backend',
+                path: '',
+              },
+              {
+                title: 'Design',
+                path: '',
+              },
+              {
+                title: 'QA',
+                path: '',
+              },
+            ]}
+          />
         </div>
         <div>
           <h4 className='footer-title'>Contact us</h4>
@@ -24,12 +61,16 @@ const Footer = () => {
             Address: 2321 New Frontend Str, Lorem Ipsum10 Hudson Yards, USA
           </div>
           <div>
-            <a href='tel:+12325005678988' className='block'>
-              Tel: + (123) 2500-567-8988
-            </a>
-            <a href='mailto:support@someemail.com' className='block'>
-              Mail: support@someemail.com
-            </a>
+            <ContactLink
+              label='Tel:'
+              title='+(123) 2500-567-8988'
+              url='tel:+12325005678988'
+            />
+            <ContactLink
+              label='Mail:'
+              title='support@someemail.com'
+              url='mailto:support@someemail.com'
+            />
           </div>
         </div>
       </div>
