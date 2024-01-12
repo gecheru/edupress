@@ -28,6 +28,6 @@
 
 @layer components {
   .footer-title {
-    @apply mb-6 uppercase;
+    @apply mb-6 uppercase text-black;
   }
 }
