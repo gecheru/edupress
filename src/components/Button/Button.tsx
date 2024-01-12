@@ -38,7 +38,7 @@ const Button = forwardRef<HTMLAnchorElement, Props>(
     ref,
   ) => {
     const classes = classNames(
-      'inline-block',
+      'inline-block transition-all',
       ButtonSizes[size],
       ButtonVariants[variant],
       pill ? 'rounded-full' : '',
