@@ -3,6 +3,8 @@ import leftVektor from './assets/leftVector.svg';
 import topVector from './assets/topVector.svg';
 import drops from './assets/drops.svg';
 import school from './assets/school.svg';
+import Button from '@components/Button/Button';
+import { RouterPaths } from '@constants/routerPaths';
 
 const Hero = () => {
   // background: linear-gradient(98deg, #FFF5BE 0%, #D0F7EA 97.73%);
@@ -21,10 +23,11 @@ const Hero = () => {
           <h1 className='mb-6'>
             Build Skills with <br className='hidden lg:inline' /> Online Course
           </h1>
-          <div className='text-xl text-gray-dark'>
-            We denounce with righteous indignation and dislike men who are so
-            beguiled and demoralized that cannot trouble.
+          <div className='mb-5 text-xl text-gray-dark'>
+            Nulla accumsan neque nec nisi molestie, sed placerat magna maximus.
+            Aliquam sed quam eu neque elementum faucibus in nec ipsum.
           </div>
+          <Button to={RouterPaths.Courses}>Find your course</Button>
         </div>
         <img
           className='pointer-events-none absolute right-0 top-[50%] translate-y-[-50%]'
