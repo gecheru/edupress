@@ -16,7 +16,7 @@ interface Props extends ButtonHTMLAttributes<HTMLAnchorElement> {
 
 const ButtonVariants: { [key in ButtonVariant]: string } = {
   primary: 'bg-primary text-white hover:bg-primary-hover hover:text-white',
-  secondary: '',
+  secondary: 'bg-white text-black border border-black border-gray',
 };
 
 const ButtonSizes: { [key in ButtonSize]: string } = {

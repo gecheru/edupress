@@ -4,7 +4,7 @@ import FooterMenu from '@components/FooterMenu/FooterMenu';
 import ContactLink from '@components/ContactLink/ContactLink';
 const Footer = () => {
   return (
-    <footer className='lg:py-15 bg-gray-white py-10 text-gray-dark [&_a:not(:hover)]:text-gray-dark [&_a]:font-medium'>
+    <footer className='lg:py-15 mt-[var(--section-h-space)] bg-gray-white py-10 text-gray-dark [&_a:not(:hover)]:text-gray-dark [&_a]:font-medium'>
       <div className='container grid gap-8 lg:grid-cols-footer'>
         <div>
           <Logo size={LogoSize.Sm} />

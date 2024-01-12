@@ -5,6 +5,8 @@
 @layer base {
   :root {
     --card-width: 410px;
+    --section-h-space: 90px;
+    --gap: 30px;
   }
   html {
     @apply bg-white text-black;
@@ -23,6 +25,9 @@
 
   h1 {
     @apply text-5xl;
+  }
+  h2 {
+    @apply text-3xl;
   }
 
   h4 {
