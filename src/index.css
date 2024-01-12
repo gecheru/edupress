@@ -21,6 +21,10 @@
     @apply font-exo font-semibold;
   }
 
+  h1 {
+    @apply text-5xl;
+  }
+
   h4 {
     @apply text-xl;
   }

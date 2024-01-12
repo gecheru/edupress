@@ -3,6 +3,7 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     screens: {
+      md: '768px',
       lg: '900px',
       xl: '1200px',
     },
@@ -35,7 +36,7 @@ export default {
     },
     extend: {
       gridTemplateRows: {
-        page: 'auto minmax(300px, 1fr) auto',
+        page: 'auto 1fr auto',
       },
       gridTemplateColumns: {
         footer:

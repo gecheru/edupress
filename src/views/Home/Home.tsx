@@ -1,9 +1,10 @@
 import Categories from '@layouts/Categories/Categories';
+import Hero from '@layouts/Hero/Hero';
 
 const Home = () => {
   return (
     <>
-      <div>hero</div>
+      <Hero />
       <Categories />
     </>
   );
