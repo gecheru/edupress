@@ -1,13 +1,14 @@
 import { useFetch } from '@/hooks/useFetch';
 import CategoryCard from '@components/CategoryCard/CategoryCard';
+import { IconName } from '@components/Icon/assets';
 import { RouterPaths } from '@constants/routerPaths';
 import SectionHeading from '@layouts/SectionHeading/SectionHeading';
 
 const Categories = () => {
   const { data, isLoading, error } =
-    useFetch<{ attributes: { name: string }; id: number }[]>(
-      'course-categories',
-    );
+    useFetch<
+      { attributes: { name: string; iconName: IconName }; id: number }[]
+    >('course-categories');
 
   if (isLoading) {
     return <div>isLoading</div>;
@@ -27,10 +28,14 @@ const Categories = () => {
           btnPath={RouterPaths.Courses}
         />
 
-        <div className='grid gap-[var(--gap)] md:grid-cols-2 lg:grid-cols-5'>
+        <div className='flex flex-wrap justify-center gap-[var(--gap)]'>
           {data &&
             data.map((cat, index) => (
-              <CategoryCard key={index} title={cat.attributes.name} />
+              <CategoryCard
+                key={index}
+                title={cat.attributes.name}
+                iconName={cat.attributes.iconName}
+              />
             ))}
         </div>
       </div>

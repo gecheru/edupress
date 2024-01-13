@@ -43,6 +43,9 @@ export default {
         footer:
           'minmax(auto, var(--card-width)) minmax(190px, 1fr) minmax(190px, 1fr) minmax(auto, var(--card-width))',
       },
+      boxShadow: {
+        hover: '0px 4px 20px 0px rgba(0, 0, 0, 0.10)',
+      },
     },
   },
   plugins: [],
