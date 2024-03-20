@@ -5,10 +5,12 @@ import { RouterPaths } from '@constants/routerPaths';
 import SectionHeading from '@layouts/SectionHeading/SectionHeading';
 
 const Categories = () => {
-  const { data, isLoading, error } =
-    useFetch<
-      { attributes: { name: string; iconName: IconName }; id: number }[]
-    >('course-categories');
+  const { data, isLoading, error } = useFetch<
+    {
+      attributes: { name: string; iconName: IconName; slug: string };
+      id: number;
+    }[]
+  >('course-categories');
 
   if (isLoading) {
     return <div>isLoading</div>;
@@ -31,11 +33,7 @@ const Categories = () => {
         <div className='flex flex-wrap justify-center gap-[var(--gap)]'>
           {data &&
             data.map((cat, index) => (
-              <CategoryCard
-                key={index}
-                title={cat.attributes.name}
-                iconName={cat.attributes.iconName}
-              />
+              <CategoryCard key={index} categoryLink={cat.attributes} />
             ))}
         </div>
       </div>
