@@ -12,8 +12,9 @@ interface Props {
 
 const MobileMenu: FC<Props> = ({ isOpened, links, menuVisibilityHandler }) => {
   const menuRef = useRef<HTMLDivElement>(null);
+  const backdrop = useRef<HTMLDivElement>(null);
   const menuClass = classNames(
-    'border-r fixed top-0 h-full w-[250px] border-r-gray-light bg-white ease-in-out duration-300 lg:hidden',
+    'border-r fixed top-0 h-full w-[250px] border-r-gray-light bg-white ease-in-out duration-300 lg:hidden z-40',
     {
       'left-[-100%]': !isOpened,
       'left-0': isOpened,
@@ -22,7 +23,7 @@ const MobileMenu: FC<Props> = ({ isOpened, links, menuVisibilityHandler }) => {
 
   useEffect(() => {
     const handleClick = (e: MouseEvent) => {
-      if (menuRef.current && menuRef.current.contains(e.target as Node)) {
+      if (menuRef.current && menuRef.current.contains(e.target as Node) || backdrop.current?.contains(e.target as Node)) {
         menuVisibilityHandler(false);
       }
     };
@@ -35,7 +36,7 @@ const MobileMenu: FC<Props> = ({ isOpened, links, menuVisibilityHandler }) => {
   return (
     <>
       {isOpened && (
-        <div className='fixed bottom-0 left-0 right-0 top-0 bg-gray-dark opacity-70 lg:hidden'></div>
+        <div className='fixed bottom-0 left-0 right-0 top-0 bg-gray-dark opacity-70 lg:hidden z-20' ref={backdrop}></div>
       )}
       <nav className={menuClass} ref={menuRef}>
         <div className='px-4 py-4'>

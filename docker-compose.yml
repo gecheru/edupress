@@ -1,21 +1,18 @@
 version: '3'
 services:
   frontend:
-    container_name: frontend
     image: frontend
-    build:
-      context: ./frontend
-      dockerfile: Dockerfile
-    environment:
-      NODE_ENV: development
+    build: ./frontend
     ports:
       - 3000:3000
+    volumes:
+      - ./frontend/src:/app/src
+      - ./frontend/public:/app/public
+      - ./frontend/vite.config.js:/app/vite.config.js
+      - ./frontend/tsconfig.json:/app/tsconfig.json
 
   strapi:
-    container_name: strapi
-    build: 
-      context: ./backend
-      dockerfile: Dockerfile
+    build: ./backend
     image: strapi:latest
     restart: unless-stopped
     environment:
