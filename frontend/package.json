@@ -21,6 +21,7 @@
     "react-router-dom": "^6.21.1"
   },
   "devDependencies": {
+    "@strapi/strapi": "^4.25.2",
     "@types/node": "^20.10.6",
     "@types/qs": "^6.9.14",
     "@types/react": "^18.2.43",
